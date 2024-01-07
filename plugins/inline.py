@@ -46,7 +46,8 @@ async def answer(bot, query):
             InlineQueryResultCachedDocument(
                 title=file.file_name,
                 document_file_id=file.file_id,
-                caption="f"<b> 🗃 ғɪʟᴇ ɴᴀᴍᴇ :</b>{title} \n\n By :[Link Locker Network](t.me/linklockernet)"",
+                f_caption ="f<b> 🌀 ғɪʟᴇ ɴᴀᴍᴇ :</b>{title} \n\n 🌱 By :[Link Locker Network](t.me/linklockernet)",
+                caption= f_caption,
                 description=f'Size: {size_formatter(file.file_size)}\nType: {file.file_type}',
                 reply_markup=reply_markup,
                 parse_mode = ParseMode.MARKDOWN                                                                                            
