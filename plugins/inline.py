@@ -4,6 +4,7 @@ from urllib.parse import quote
 from pyrogram import Client, emoji, filters
 from pyrogram.errors import UserNotParticipant
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, InlineQueryResultCachedDocument
+from pyrogram.enum import ParseMode
 
 from utils import get_search_results
 from info import CACHE_TIME, SHARE_BUTTON_TEXT, AUTH_USERS, AUTH_CHANNEL
@@ -40,14 +41,15 @@ async def answer(bot, query):
 
     for file in files:
         
-        f_caption = f"<b> By :@linklockernet🗃 ғɪʟᴇ ɴᴀᴍᴇ :</b>{file.caption}"
+        
         results.append(
             InlineQueryResultCachedDocument(
                 title=file.file_name,
                 document_file_id=file.file_id,
-                caption=f_caption,
+                caption="f"<b> 🗃 ғɪʟᴇ ɴᴀᴍᴇ :</b>{title} \n\n By :[Link Locker Network](t.me/linklockernet)"",
                 description=f'Size: {size_formatter(file.file_size)}\nType: {file.file_type}',
-                reply_markup=reply_markup
+                reply_markup=reply_markup,
+                parse_mode = ParseMode.MARKDOWN                                                                                            
             )
         )
 
