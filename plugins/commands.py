@@ -3,25 +3,30 @@ import logging
 
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-
+from pyrogram.enum import ParseMode
 from info import START_MSG, CHANNELS, ADMINS, INVITE_MSG
 from utils import Media
 
 logger = logging.getLogger(__name__)
-
-
+START_MXG ="✨ʜᴇʟʟᴏ... I am Lexica 🦋 Tap Search Inline  button To access files "
+img  = 
 @Client.on_message(filters.command('start'))
-async def start(client, message):
+async def start(bot, message):
     """Start command handler"""
     if len(message.command) > 1 and message.command[1] == 'subscribe':
         await message.reply(INVITE_MSG)
     else:
-        buttons = [[
+        buttons = [
+            [
             InlineKeyboardButton('Search Here', switch_inline_query_current_chat=''),
-            InlineKeyboardButton('Go Inline', switch_inline_query=''),
-        ]]
+            InlineKeyboardButton('Search In Chat', switch_inline_query=''),
+        ],
+            [InlineKeyboardButton('Updates', url ='t.me/Lexica_updates'),
+            InlineKeyboardButton('About', url = 't.me/linklockernet'),]
+                  
+                  ]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await message.reply(START_MSG, reply_markup=reply_markup)
+        await message.reply_photo(photo = img ,caption = START_MXG, reply_markup=reply_markup ,)
 
 
 @Client.on_message(filters.command('channel') & filters.user(ADMINS))
