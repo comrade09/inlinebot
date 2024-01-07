@@ -41,7 +41,7 @@ async def answer(bot, query):
     for file in files:
         title=file.file_name
         size=file.file_size
-        f_caption = f"<b> By @linklockernet🗃 ғɪʟᴇ ɴᴀᴍᴇ :</b>{file.caption}\n\n Size : {file.size}  "
+        f_caption = f"<b> By :@linklockernet🗃 ғɪʟᴇ ɴᴀᴍᴇ :</b>{file.caption}\n\n Size : {file.size}  "
         results.append(
             InlineQueryResultCachedDocument(
                 title=file.file_name,
@@ -82,8 +82,8 @@ def get_reply_markup(username, query):
     url = 't.me/share/url?url=' + quote(SHARE_BUTTON_TEXT.format(username=username))
     buttons = [
         [
-            InlineKeyboardButton('Search again', switch_inline_query_current_chat=query),
-            InlineKeyboardButton('Share bot', url=url),
+            InlineKeyboardButton('♻️Search again', switch_inline_query_current_chat=query),
+            InlineKeyboardButton('🌀Channel', url="t.me/linklockernet"),
         ]
     ]
     return InlineKeyboardMarkup(buttons)
