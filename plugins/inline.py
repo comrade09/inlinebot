@@ -39,9 +39,8 @@ async def answer(bot, query):
     files, next_offset = await get_search_results(text, file_type=file_type, max_results=10, offset=offset)
 
     for file in files:
-        title=file.file_name
-        size=file.file_size
-        f_caption = f"<b> By :@linklockernet🗃 ғɪʟᴇ ɴᴀᴍᴇ :</b>{file.caption}\n\n Size : {file.size}  "
+        
+        f_caption = f"<b> By :@linklockernet🗃 ғɪʟᴇ ɴᴀᴍᴇ :</b>{file.caption}"
         results.append(
             InlineQueryResultCachedDocument(
                 title=file.file_name,
