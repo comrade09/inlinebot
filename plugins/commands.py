@@ -26,7 +26,7 @@ async def start(bot, message):
                   
                   ]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await message.reply_photo(photo = img ,caption = START_MXG, reply_markup=reply_markup ,ParseMode =ParseMode.MARKDOWN)
+        await message.reply_photo(photo = img ,caption = START_MXG, reply_markup=reply_markup , parse_mode = ParseMode.MARKDOWN)
 
 
 @Client.on_message(filters.command('channel') & filters.user(ADMINS))
