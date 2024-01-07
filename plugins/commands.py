@@ -9,7 +9,7 @@ from utils import Media
 
 logger = logging.getLogger(__name__)
 START_MXG ="✨ʜᴇʟʟᴏ... I am Lexica 🦋 Tap Search Inline  button To access files "
-img  = 
+img  = "https://te.legra.ph/file/7149c31a1805b7b03ed57.jpg"
 @Client.on_message(filters.command('start'))
 async def start(bot, message):
     """Start command handler"""
