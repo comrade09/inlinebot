@@ -41,7 +41,7 @@ async def answer(bot, query):
 
     for file in files:
         
-        fuck "f<b> 🌀 ғɪʟᴇ ɴᴀᴍᴇ :</b>{file.caption} \n\n 🌱 By :[Link Locker Network](t.me/linklockernet)"
+        fuck = "f<b> 🌀 ғɪʟᴇ ɴᴀᴍᴇ :</b>{file.caption} \n\n 🌱 By :[Link Locker Network](t.me/linklockernet)"
         results.append(
             InlineQueryResultCachedDocument(
                 title=file.file_name,
