@@ -33,7 +33,7 @@ async def start(bot, message):
         reply_markup = InlineKeyboardMarkup(buttons)
         desired_timezone = 'Asia/Kolkata'
         current_time = datetime.now(pytz.timezone(desired_timezone)).strftime("%Y-%m-%d %H:%M:%S")
-        await message.reply_photo(photo = img ,caption = f"{START_MXG}\n\n Current India Time: {current_time}", reply_markup=reply_markup , parse_mode = ParseMode.MARKDOWN)
+        await message.reply_photo(photo = img ,caption = f"{START_MXG}\n\n India's Current Time: {current_time}", reply_markup=reply_markup , parse_mode = ParseMode.MARKDOWN)
 
 
 @Client.on_message(filters.command('channel') & filters.user(ADMINS))
