@@ -6,6 +6,8 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram.enums import ParseMode
 from info import START_MSG, CHANNELS, ADMINS, INVITE_MSG
 from utils import Media
+from datetime import datetime , timedelta
+import pytz
 
 logger = logging.getLogger(__name__)
 START_MXG ="✨ʜᴇʟʟᴏ... I am Lexica 🦋 Tap Search Inline  button To access files "
@@ -29,7 +31,9 @@ async def start(bot, message):
                   
                   ]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await message.reply_photo(photo = img ,caption = START_MXG, reply_markup=reply_markup , parse_mode = ParseMode.MARKDOWN)
+        desired_timezone = 'Asia/Kolkata'
+        current_time = datetime.now(pytz.timezone(desired_timezone)).strftime("%Y-%m-%d %H:%M:%S")
+        await message.reply_photo(photo = img ,caption = f"{START_MXG}\n\n Current India Time: {current_time}",, reply_markup=reply_markup , parse_mode = ParseMode.MARKDOWN)
 
 
 @Client.on_message(filters.command('channel') & filters.user(ADMINS))
