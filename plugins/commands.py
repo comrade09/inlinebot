@@ -11,7 +11,7 @@ import pytz
 
 logger = logging.getLogger(__name__)
 START_MXG ="✨ʜᴇʟʟᴏ... I am Lexica 🦋 Tap Search Inline  button To access files "
-FSUB = "https://t.me/volatic_network"
+FSUB = "https://t.me/votaic_network"
 INX = f"Join My Channel To Access Files [Join Channel]({FSUB})"
 IMG  = "https://te.legra.ph/file/7149c31a1805b7b03ed57.jpg"
 @Client.on_message(filters.command('start'))
