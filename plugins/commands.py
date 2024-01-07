@@ -2,8 +2,8 @@ import os
 import logging
 
 from pyrogram import Client, filters
-from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
-from pyrogram.enums import ParseMode
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup,ParseMode
+
 from info import START_MSG, CHANNELS, ADMINS, INVITE_MSG
 from utils import Media
 
@@ -26,7 +26,7 @@ async def start(bot, message):
                   
                   ]
         reply_markup = InlineKeyboardMarkup(buttons)
-        await message.reply_photo(photo = img ,caption = START_MXG, reply_markup=reply_markup ,)
+        await message.reply_photo(photo = img ,caption = START_MXG, reply_markup=reply_markup ,ParseMode =ParseMode.MARKDOWN)
 
 
 @Client.on_message(filters.command('channel') & filters.user(ADMINS))
