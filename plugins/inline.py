@@ -39,11 +39,14 @@ async def answer(bot, query):
     files, next_offset = await get_search_results(text, file_type=file_type, max_results=10, offset=offset)
 
     for file in files:
+        title=file.file_name
+        size=file.file_size
+        f_caption = f"<b> By @linklockernet🗃 ғɪʟᴇ ɴᴀᴍᴇ :</b>{file.caption}\n\n Size : {file.size}  "
         results.append(
             InlineQueryResultCachedDocument(
                 title=file.file_name,
                 document_file_id=file.file_id,
-                caption=file.caption or "",
+                caption=f_caption,
                 description=f'Size: {size_formatter(file.file_size)}\nType: {file.file_type}',
                 reply_markup=reply_markup
             )
