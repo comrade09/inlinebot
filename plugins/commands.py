@@ -18,7 +18,7 @@ IMG  = "https://te.legra.ph/file/7149c31a1805b7b03ed57.jpg"
 async def start(bot, message):
     """Start command handler"""
     if len(message.command) > 1 and message.command[1] == 'subscribe':
-        await message.reply_text(INX, reply_markup =InlineKeyboardMarkup([[InlineKeyboardButton('Join Channel', url = "FSUB"),],]) )
+        await message.reply_text(INX, reply_markup =InlineKeyboardMarkup([[InlineKeyboardButton('Join Channel', url = f"{FSUB}"),],]) )
     else:
         buttons = [
             [
