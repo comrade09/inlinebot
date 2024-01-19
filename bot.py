@@ -21,7 +21,7 @@ class Bot(Client):
             bot_token=BOT_TOKEN,
             workers=50,
             plugins={"root": "plugins"},
-            sleep_threshold=10,
+            sleep_threshold=5,
         )
 
     async def start(self):
@@ -36,5 +36,3 @@ class Bot(Client):
         print("Bot stopped. Bye.")
 
 
-app = Bot()
-app.run()
