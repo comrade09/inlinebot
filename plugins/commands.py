@@ -6,8 +6,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram.enums import ParseMode
 from info import START_MSG, CHANNELS, ADMINS, INVITE_MSG
 from utils import Media
-from datetime import datetime , timedelta
-import pytz
+
 
 logger = logging.getLogger(__name__)
 START_MXG ="✨ʜᴇʟʟᴏ... I am Lexica 🦋 Tap Search Inline  button To access files "
